@@ -1,8 +1,16 @@
-const Filter = ({ handleFilter, filter }) => {
+import styles from './Filter.module.css';
+
+const Filter = ({ onFilter, filter }) => {
   return (
-    <label>
+    <label className={styles.label}>
       Find contacts by name
-      <input type="text" name="filter" value={filter} onChange={handleFilter} />
+      <input
+        className={styles.input}
+        type="text"
+        name="filter"
+        value={filter}
+        onChange={onFilter}
+      />
     </label>
   );
 };
