@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import styles from './Filter.module.css';
 
 const Filter = ({ onFilter, filter }) => {
@@ -13,6 +15,10 @@ const Filter = ({ onFilter, filter }) => {
       />
     </label>
   );
+};
+
+Filter.propTypes = {
+  onFilter: PropTypes.func.isRequired,
 };
 
 export default Filter;
